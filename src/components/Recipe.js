@@ -94,8 +94,7 @@ const query = `
       id
       slug
       title {
-        danish
-        english
+        title(locale:da)
       }
       author {
         name
