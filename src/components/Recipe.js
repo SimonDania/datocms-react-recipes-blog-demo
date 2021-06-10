@@ -36,7 +36,7 @@ const Recipe = props => {
       ) : (
         recipe && (
           <article>
-            <h1 className="Recipe-title">{recipe.title.title}</h1>
+            <h1 className="Recipe-title">{recipe.title}</h1>
             <strong>
               By <Link to={"/about"}>{recipe.author.name}</Link>
             </strong>
@@ -93,9 +93,7 @@ const query = `
     recipe: recipe(filter: { slug: { eq: $slug } }) {
       id
       slug
-      title {
-        title(locale:da)
-      }
+      title(locale:da)
       author {
         name
       }
