@@ -93,7 +93,10 @@ const query = `
     recipe: recipe(filter: { slug: { eq: $slug } }) {
       id
       slug
-      title
+      title {
+        danish
+        english
+      }
       author {
         name
       }
